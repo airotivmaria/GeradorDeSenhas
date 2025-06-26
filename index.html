@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Gerador de senhas</title>
+</head>
+<body class="body">
+    <h1>Gerador de Senhas Aleatórias</h1>
+    <form action="pegar-infos" class="forms">
+        <h3>Qual o tamanho da senha que deseja?</h3>
+        <input type="text" name="caracter" id="tamanho-senha" placeholder="Digite o tamanho da senha">
+        <div class="msg" id="mensagem"></div>
+    </form>
+    <div id="escrever-senha" class="txt">
+        <i class="fa-solid fa-copy" id="copiar-senha"></i>
+        <span id="senha-gerada"></span>
+        <button type="submit" id="button-submit" class="btn">Gerar Senha</button>
+        </div>
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>
+
+ <style>
+        body {
+            background-color: azure;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(0, 64, 255);
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .forms {
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 20px;
+            background-color: rgb(14, 100, 238);
+            border-radius: 10px;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 1rem;
+            background-color: #01d5ff;
+            border: none;
+            color: #000;
+        }
+
+        input::placeholder {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        #escrever-senha {
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgb(14, 100, 238);
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            box-sizing: border-box;
+        }
+
+        .fa-copy {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .fa-copy:hover {
+            color: #01d5ff;
+        }
+
+        .msg {
+            color: red;
+            text-align: center;
+            font-size: 14px;
+            margin-top: -10px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            border: 0;
+            background: #0095ff;
+            color: #fff;
+            border-radius: 5px;
+            margin: 5px 0;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #0077cc;
+        }
+    </style>
